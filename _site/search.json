@@ -26,8 +26,9 @@
     "href": "reference/index.html",
     "title": "Function reference",
     "section": "",
-    "text": "Functions to inspect docstrings.\n\n\n\nget_object\nFetch a griffe object.\n\n\npreview\nPrint a friendly representation of a griffe object (e.g. function, docstring)",
+    "text": "Functions to inspect docstrings.\n\n\n\ncount_char\nCount the number of characters in a string.\n\n\nexample.add_numbers\nAdd two numbers together and return the result.",
     "crumbs": [
+      "Reference",
       "Function reference"
     ]
   },
@@ -36,8 +37,9 @@
     "href": "reference/index.html#some-functions",
     "title": "Function reference",
     "section": "",
-    "text": "Functions to inspect docstrings.\n\n\n\nget_object\nFetch a griffe object.\n\n\npreview\nPrint a friendly representation of a griffe object (e.g. function, docstring)",
+    "text": "Functions to inspect docstrings.\n\n\n\ncount_char\nCount the number of characters in a string.\n\n\nexample.add_numbers\nAdd two numbers together and return the result.",
     "crumbs": [
+      "Reference",
       "Function reference"
     ]
   },
@@ -95,5 +97,123 @@
       "Some functions",
       "get_object"
     ]
+  },
+  {
+    "objectID": "reference/count_char.html",
+    "href": "reference/count_char.html",
+    "title": "count_char",
+    "section": "",
+    "text": "count_char(input_string)\nCount the number of characters in a string.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ninput_string\nstr\nThe string to count characters from.\nrequired\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nint\nThe number of characters in the input string.\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf input_string is not of type str.\n\n\n\n\n\n\n&gt;&gt;&gt; count_char(\"hello\")\n5\n&gt;&gt;&gt; count_char(\"\")\n0\n&gt;&gt;&gt; count_char(\"hello world\")\n11",
+    "crumbs": [
+      "Reference",
+      "Some functions",
+      "count_char"
+    ]
+  },
+  {
+    "objectID": "reference/countchar.count_char.html",
+    "href": "reference/countchar.count_char.html",
+    "title": "countchar.count_char",
+    "section": "",
+    "text": "countchar.count_char\ncountchar.count_char"
+  },
+  {
+    "objectID": "reference/count_char.html#parameters",
+    "href": "reference/count_char.html#parameters",
+    "title": "count_char",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\ninput_string\nstr\nThe string to count characters from.\nrequired",
+    "crumbs": [
+      "Reference",
+      "Some functions",
+      "count_char"
+    ]
+  },
+  {
+    "objectID": "reference/count_char.html#returns",
+    "href": "reference/count_char.html#returns",
+    "title": "count_char",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\n\nint\nThe number of characters in the input string.",
+    "crumbs": [
+      "Reference",
+      "Some functions",
+      "count_char"
+    ]
+  },
+  {
+    "objectID": "reference/count_char.html#raises",
+    "href": "reference/count_char.html#raises",
+    "title": "count_char",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\n\nTypeError\nIf input_string is not of type str.",
+    "crumbs": [
+      "Reference",
+      "Some functions",
+      "count_char"
+    ]
+  },
+  {
+    "objectID": "reference/count_char.html#examples",
+    "href": "reference/count_char.html#examples",
+    "title": "count_char",
+    "section": "",
+    "text": "&gt;&gt;&gt; count_char(\"hello\")\n5\n&gt;&gt;&gt; count_char(\"\")\n0\n&gt;&gt;&gt; count_char(\"hello world\")\n11",
+    "crumbs": [
+      "Reference",
+      "Some functions",
+      "count_char"
+    ]
+  },
+  {
+    "objectID": "reference/example.add_numbers.html",
+    "href": "reference/example.add_numbers.html",
+    "title": "example.add_numbers",
+    "section": "",
+    "text": "example.add_numbers(a, b)\nAdd two numbers together and return the result.\nThis is an example function with a numpy style docstring. We recommend using this style for consistency and readability.\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\na\nfloat\nThe first number to add.\nrequired\n\n\nb\nfloat\nThe second number to add.\nrequired\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nfloat\nThe sum of the two numbers.\n\n\n\n\n\n\n&gt;&gt;&gt; add_numbers(3, 5)\n8\n&gt;&gt;&gt; add_numbers(-2, 7)\n5",
+    "crumbs": [
+      "Some functions",
+      "example.add_numbers"
+    ]
+  },
+  {
+    "objectID": "reference/example.add_numbers.html#parameters",
+    "href": "reference/example.add_numbers.html#parameters",
+    "title": "example.add_numbers",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\na\nfloat\nThe first number to add.\nrequired\n\n\nb\nfloat\nThe second number to add.\nrequired",
+    "crumbs": [
+      "Some functions",
+      "example.add_numbers"
+    ]
+  },
+  {
+    "objectID": "reference/example.add_numbers.html#returns",
+    "href": "reference/example.add_numbers.html#returns",
+    "title": "example.add_numbers",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\n\nfloat\nThe sum of the two numbers.",
+    "crumbs": [
+      "Some functions",
+      "example.add_numbers"
+    ]
+  },
+  {
+    "objectID": "reference/example.add_numbers.html#examples",
+    "href": "reference/example.add_numbers.html#examples",
+    "title": "example.add_numbers",
+    "section": "",
+    "text": "&gt;&gt;&gt; add_numbers(3, 5)\n8\n&gt;&gt;&gt; add_numbers(-2, 7)\n5",
+    "crumbs": [
+      "Some functions",
+      "example.add_numbers"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "",
+    "section": "",
+    "text": "Hello"
   }
 ]

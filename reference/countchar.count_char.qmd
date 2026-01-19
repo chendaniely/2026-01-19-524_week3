@@ -1,0 +1,4 @@
+# countchar.count_char { #pytest1.countchar.count_char }
+
+`countchar.count_char`
+

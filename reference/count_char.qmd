@@ -1,0 +1,36 @@
+# count_char { #pytest1.count_char }
+
+```python
+count_char(input_string)
+```
+
+Count the number of characters in a string.
+
+## Parameters {.doc-section .doc-section-parameters}
+
+| Name         | Type   | Description                          | Default    |
+|--------------|--------|--------------------------------------|------------|
+| input_string | str    | The string to count characters from. | _required_ |
+
+## Returns {.doc-section .doc-section-returns}
+
+| Name   | Type   | Description                                   |
+|--------|--------|-----------------------------------------------|
+|        | int    | The number of characters in the input string. |
+
+## Raises {.doc-section .doc-section-raises}
+
+| Name   | Type      | Description                         |
+|--------|-----------|-------------------------------------|
+|        | TypeError | If input_string is not of type str. |
+
+## Examples {.doc-section .doc-section-examples}
+
+```python
+>>> count_char("hello")
+5
+>>> count_char("")
+0
+>>> count_char("hello world")
+11
+```

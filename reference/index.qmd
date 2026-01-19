@@ -6,5 +6,5 @@ Functions to inspect docstrings.
 
 | | |
 | --- | --- |
-| [get_object](get_object.qmd#quartodoc.get_object) | Fetch a griffe object. |
-| [preview](preview.qmd#quartodoc.preview) | Print a friendly representation of a griffe object (e.g. function, docstring) |
+| [count_char](count_char.qmd#pytest1.count_char) | Count the number of characters in a string. |
+| [example.add_numbers](example.add_numbers.qmd#pytest1.example.add_numbers) | Add two numbers together and return the result. |

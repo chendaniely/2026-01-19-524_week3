@@ -1,5 +1,5 @@
-name: pytest1
+name: 524-week3
 channels:
   - conda-forge
 dependencies:
-  - python
+  - python=3.13
