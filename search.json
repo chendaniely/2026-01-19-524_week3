@@ -1,0 +1,134 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "2026-01-12-pytest",
+    "section": "",
+    "text": "Example demo/live code repo for UBC DSCI 524 Week 3 (ci/cd + documentation)\n\n\n\ngithub actions (a more proper lecture)\nGHA + testing (pytest)\ndocumentation (quartodoc)\n\n\n\n\n\ndocumentation (quartodoc + quarto websites)\nmore ci + cd\n\nci: testing, style checker, runs on push/pr main + other branches\ncd: test, style checker, pypi test, documentation (gh-pages branch)\n\nconventional commits, changelogs\n\nNext week:\nmore automations:\n\nauto version bumping for pypi test\ncoverage badges"
+  },
+  {
+    "objectID": "index.html#lecture-1",
+    "href": "index.html#lecture-1",
+    "title": "2026-01-12-pytest",
+    "section": "",
+    "text": "github actions (a more proper lecture)\nGHA + testing (pytest)\ndocumentation (quartodoc)"
+  },
+  {
+    "objectID": "index.html#lecture-2",
+    "href": "index.html#lecture-2",
+    "title": "2026-01-12-pytest",
+    "section": "",
+    "text": "documentation (quartodoc + quarto websites)\nmore ci + cd\n\nci: testing, style checker, runs on push/pr main + other branches\ncd: test, style checker, pypi test, documentation (gh-pages branch)\n\nconventional commits, changelogs\n\nNext week:\nmore automations:\n\nauto version bumping for pypi test\ncoverage badges"
+  },
+  {
+    "objectID": "reference/preview.html",
+    "href": "reference/preview.html",
+    "title": "preview",
+    "section": "",
+    "text": "preview(ast, max_depth=999, compact=False, as_string=False)\nPrint a friendly representation of a griffe object (e.g. function, docstring)\n\n\n&gt;&gt;&gt; from quartodoc import get_object\n&gt;&gt;&gt; obj = get_object(\"quartodoc\", \"get_object\")\n&gt;&gt;&gt; preview(obj.docstring.parsed)\n...\n&gt;&gt;&gt; preview(obj)\n..."
+  },
+  {
+    "objectID": "reference/preview.html#examples",
+    "href": "reference/preview.html#examples",
+    "title": "preview",
+    "section": "",
+    "text": "&gt;&gt;&gt; from quartodoc import get_object\n&gt;&gt;&gt; obj = get_object(\"quartodoc\", \"get_object\")\n&gt;&gt;&gt; preview(obj.docstring.parsed)\n...\n&gt;&gt;&gt; preview(obj)\n..."
+  },
+  {
+    "objectID": "reference/example.add_numbers.html",
+    "href": "reference/example.add_numbers.html",
+    "title": "example.add_numbers",
+    "section": "",
+    "text": "example.add_numbers(a, b)\nAdd two numbers together and return the result.\nThis is an example function with a numpy style docstring. We recommend using this style for consistency and readability.\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\na\nfloat\nThe first number to add.\nrequired\n\n\nb\nfloat\nThe second number to add.\nrequired\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nfloat\nThe sum of the two numbers.\n\n\n\n\n\n\n&gt;&gt;&gt; add_numbers(3, 5)\n8\n&gt;&gt;&gt; add_numbers(-2, 7)\n5"
+  },
+  {
+    "objectID": "reference/example.add_numbers.html#parameters",
+    "href": "reference/example.add_numbers.html#parameters",
+    "title": "example.add_numbers",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\na\nfloat\nThe first number to add.\nrequired\n\n\nb\nfloat\nThe second number to add.\nrequired"
+  },
+  {
+    "objectID": "reference/example.add_numbers.html#returns",
+    "href": "reference/example.add_numbers.html#returns",
+    "title": "example.add_numbers",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\n\nfloat\nThe sum of the two numbers."
+  },
+  {
+    "objectID": "reference/example.add_numbers.html#examples",
+    "href": "reference/example.add_numbers.html#examples",
+    "title": "example.add_numbers",
+    "section": "",
+    "text": "&gt;&gt;&gt; add_numbers(3, 5)\n8\n&gt;&gt;&gt; add_numbers(-2, 7)\n5"
+  },
+  {
+    "objectID": "reference/count_char.html",
+    "href": "reference/count_char.html",
+    "title": "count_char",
+    "section": "",
+    "text": "count_char\ncount_char(input_string)",
+    "crumbs": [
+      "Reference",
+      "Some functions",
+      "count_char"
+    ]
+  },
+  {
+    "objectID": "reference/get_object.html",
+    "href": "reference/get_object.html",
+    "title": "get_object",
+    "section": "",
+    "text": "get_object(\n    path,\n    object_name=None,\n    parser='numpy',\n    load_aliases=True,\n    dynamic=False,\n    loader=None,\n)\nFetch a griffe object.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\npath\nstr\nAn import path to the object. This should have the form path.to.module:object. For example, quartodoc:get_object or quartodoc:MdRenderer.render.\nrequired\n\n\nobject_name\n'str | None'\n(Deprecated). A function name.\nNone\n\n\nparser\nstr\nA docstring parser to use.\n'numpy'\n\n\nload_aliases\n\nFor aliases that were imported from other modules, should we load that module?\nTrue\n\n\ndynamic\n\nWhether to dynamically import object. Useful if docstring is not hard-coded, but was set on object by running python code.\nFalse\n\n\n\n\n\n\npreview: print a user-friendly preview of a griffe object.\n\n\n\n&gt;&gt;&gt; get_function(\"quartodoc\", \"get_function\")\n&lt;Function('get_function', ...\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nx\ndc.Object\nabc"
+  },
+  {
+    "objectID": "reference/get_object.html#parameters",
+    "href": "reference/get_object.html#parameters",
+    "title": "get_object",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\npath\nstr\nAn import path to the object. This should have the form path.to.module:object. For example, quartodoc:get_object or quartodoc:MdRenderer.render.\nrequired\n\n\nobject_name\n'str | None'\n(Deprecated). A function name.\nNone\n\n\nparser\nstr\nA docstring parser to use.\n'numpy'\n\n\nload_aliases\n\nFor aliases that were imported from other modules, should we load that module?\nTrue\n\n\ndynamic\n\nWhether to dynamically import object. Useful if docstring is not hard-coded, but was set on object by running python code.\nFalse"
+  },
+  {
+    "objectID": "reference/get_object.html#see-also",
+    "href": "reference/get_object.html#see-also",
+    "title": "get_object",
+    "section": "",
+    "text": "preview: print a user-friendly preview of a griffe object."
+  },
+  {
+    "objectID": "reference/get_object.html#examples",
+    "href": "reference/get_object.html#examples",
+    "title": "get_object",
+    "section": "",
+    "text": "&gt;&gt;&gt; get_function(\"quartodoc\", \"get_function\")\n&lt;Function('get_function', ..."
+  },
+  {
+    "objectID": "reference/get_object.html#returns",
+    "href": "reference/get_object.html#returns",
+    "title": "get_object",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\nx\ndc.Object\nabc"
+  },
+  {
+    "objectID": "reference/index.html",
+    "href": "reference/index.html",
+    "title": "Function reference",
+    "section": "",
+    "text": "Functions to inspect docstrings.\n\n\n\ncount_char",
+    "crumbs": [
+      "Reference",
+      "Function reference"
+    ]
+  },
+  {
+    "objectID": "reference/index.html#some-functions",
+    "href": "reference/index.html#some-functions",
+    "title": "Function reference",
+    "section": "",
+    "text": "Functions to inspect docstrings.\n\n\n\ncount_char",
+    "crumbs": [
+      "Reference",
+      "Function reference"
+    ]
+  }
+]
