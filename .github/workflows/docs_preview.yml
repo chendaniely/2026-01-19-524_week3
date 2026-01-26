@@ -79,12 +79,14 @@ jobs:
         run: |
           npm install -g netlify-cli
           if [ "${REF_NAME}" = "master" ] || [ "${REF_NAME}" = "main" ]; then
-            netlify deploy --dir=_site/ --prod | tee deploy.log
+            netlify deploy --dir=_site/ --prod 2>&1 | tee deploy.log
           else
-            netlify deploy --dir=_site/ --alias="${ALIAS}" | tee deploy.log
+            netlify deploy --dir=_site/ --alias="${ALIAS}" 2>&1 | tee deploy.log
           fi
-          DEPLOY_URL=$(grep -oP 'Website Draft URL: \K.*' deploy.log || grep -oP 'Website URL: \K.*' deploy.log)
+          DEPLOY_URL=$(grep -oP 'https://[^\s]+' deploy.log | grep -E '(netlify\.app|--.*\.netlify\.app)' | head -n 1)
           echo "url=${DEPLOY_URL}" >> $GITHUB_OUTPUT
+          cat deploy.log
+          
       - name: Update Github "view deployment" button in PR
         uses: bobheadxi/deployments@v1
         if: ${{ always() && github.event_name == 'pull_request'}}
