@@ -68,6 +68,7 @@ jobs:
           logs: 'https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'
 
       - name: Deploy to Netlify
+        id: netlify
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
@@ -75,12 +76,13 @@ jobs:
           ALIAS: ${{ steps.deployment.outputs.env }}
         run: |
           npm install -g netlify-cli
-          # push main branch to production, others to preview --
           if [ "${REF_NAME}" = "master" ] || [ "${REF_NAME}" = "main" ]; then
-            netlify deploy --dir=_site/ --prod
+            netlify deploy --dir=_site/ --prod | tee deploy.log
           else
-            netlify deploy --dir=_site/ --alias="${ALIAS}"
+            netlify deploy --dir=_site/ --alias="${ALIAS}" | tee deploy.log
           fi
+          DEPLOY_URL=$(grep -oP 'Website Draft URL: \K.*' deploy.log || grep -oP 'Website URL: \K.*' deploy.log)
+          echo "url=${DEPLOY_URL}" >> $GITHUB_OUTPUT
       - name: Update Github "view deployment" button in PR
         uses: bobheadxi/deployments@v1
         if: ${{ always() && github.event_name == 'pull_request'}}
@@ -90,5 +92,5 @@ jobs:
           status: ${{ job.status }}
           deployment_id: ${{ steps.deployment.outputs.deployment_id }}
           env: ${{ steps.deployment.outputs.env }}
-          env_url: 'https://${{ steps.deployment.outputs.env }}--quarto-website-template.netlify.app'
+          env_url: ${{ steps.netlify.outputs.url }}
           logs: 'https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'
