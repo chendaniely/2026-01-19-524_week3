@@ -1,5 +1,7 @@
 # 2026-01-12-pytest
 
+[![codecov](https://codecov.io/github/chendaniely/2026-01-19-524_week3/graph/badge.svg?token=R48T2BH2HZ)](https://codecov.io/github/chendaniely/2026-01-19-524_week3)
+
 Example demo/live code repo for UBC DSCI 524 Week 3 (ci/cd + documentation)
 
 ## Lecture 1
