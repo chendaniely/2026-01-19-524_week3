@@ -91,6 +91,10 @@ source = "vcs"
 [tool.hatch.build.hooks.vcs]
 version-file = "src/pytest1/__version__.py"
 
+[tool.setuptools_scm]
+version_scheme = "no-guess-dev"
+local_scheme = "no-local-version"
+
 ######## Configure pytest for your test suite ########
 [tool.pytest.ini_options]
 testpaths = ["tests"] # Tells pytest what directory tests are in
